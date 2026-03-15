@@ -21,5 +21,7 @@ If you are evaluating the `.zip` submission, the folder structure is as follows:
     └── leftcamera/
         ├── Im_L_1.png
         └── ...
+/
+
 ## Prerequisites
 Ensure you have Python 3.x installed along with the following standard computer vision libraries:
