@@ -11,6 +11,19 @@ This project was completed as a course assignment for the School of Electrical a
 * **Comprehensive Metrics:** Calculates and outputs both the overall Root Mean Square (RMS) error and the average per-image Mean Reprojection Error.
 * **Auto-Undistortion:** Automatically generates and saves an undistorted sample image based on the calculated camera matrix.
 
+## 📁 Submission Directory Structure
+If you are evaluating the `.zip` submission, the folder structure is as follows:
+
+```text
+/
+├── full_camera_calibration_auto_detect.py  # Main source code
+├── README.md                               # Execution instructions
+├── Report.pdf                              # Mathematical theory and methodology
+└── data/                                   # Sample calibration images
+    └── leftcamera/
+        ├── Im_L_1.png
+        └── ...
+```
 
 ## 🛠️ Prerequisites
 
@@ -78,27 +91,54 @@ image_path_glob = '/kaggle/input/your-dataset-name/data/imgs/leftcamera/*.png'
 Matplotlib will automatically display the **corner detection visualizations inline**.
 
 
-## Expected Output
-Upon successful execution, the script will output the following directly to the console/terminal:
+## 📊 Expected Output
 
-The optimal inner-corner grid size automatically selected by the algorithm.
+Upon successful execution, the script will output the following directly to the **console / terminal**:
 
-The mathematically extracted 3x3 Intrinsic Camera Matrix (K).
+### 🔍 Calibration Results
+- **Optimal inner-corner grid size** automatically selected by the algorithm.
+- **Intrinsic Camera Matrix (K)** — a 3×3 matrix representing camera intrinsics.
+- **Extracted parameters:**
+  - Focal Lengths: `fx`, `fy`
+  - Principal Points: `cx`, `cy`
+  - Skew: `γ (gamma)`
+- **Lens Distortion Coefficients:**
+k1, k2, p1, p2, k3
 
-Extracted Focal Lengths (fx, fy), Principal Points (cx, cy), and Skew (gamma).
+- **Extrinsic Parameters**
+- Rotation vectors
+- Translation vectors
+- **Accuracy Metrics**
+- Overall **RMS Error**
+- Mean **Reprojection Error**
 
-Lens Distortion Coefficients (k1, k2, p1, p2, k3).
+---
 
-The Extrinsic Parameters (Rotation and Translation vectors).
+## 📂 Generated Artifacts
 
-The Overall RMS Error and Mean Reprojection Error to validate accuracy.
+The script automatically creates a directory:
 
-Generated Artifacts:
-The script will automatically create a directory (default: /calib_auto/) and save the following files:
+/calib_auto/
 
-camera_calib.npz: A NumPy archive containing all the calculated matrices and vectors for future use.
 
-first_detection_[WxH].png: A visual confirmation image showing the drawn checkerboard corners.
+and saves the following files:
 
-undistorted_example.png: An example of an image from the dataset with the calculated lens distortion mathematically removed.
+### Saved Files
 
+**1️⃣ Camera Calibration Data**
+```text
+camera_calib.npz
+```
+A NumPy archive containing all calculated matrices and vectors for future use.
+
+2️⃣ Checkerboard Detection Visualization
+```
+first_detection_[WxH].png
+```
+A visual confirmation image showing the detected checkerboard corners.
+
+3️⃣ Undistorted Sample Image
+```
+undistorted_example.png
+```
+An example dataset image with the calculated lens distortion mathematically removed.
