@@ -5,32 +5,20 @@ This repository contains a robust Python implementation of a camera calibration 
 
 This project was completed as a course assignment for the School of Electrical and Computer Sciences at IIT Bhubaneswar.
 
-## ✨ Features
+## Features
 * **Dynamic Grid Auto-Detection:** Automatically scans and tests multiple candidate grid sizes (e.g., 6x5, 11x8) using various image processing techniques (histogram equalization, multi-scale resizing) to maximize successful detections across imperfect datasets.
 * **Sub-Pixel Corner Refinement:** Utilizes `cv2.cornerSubPix` to refine detected corners to fractional pixel accuracy, drastically lowering reprojection error.
 * **Comprehensive Metrics:** Calculates and outputs both the overall Root Mean Square (RMS) error and the average per-image Mean Reprojection Error.
 * **Auto-Undistortion:** Automatically generates and saves an undistorted sample image based on the calculated camera matrix.
 
-## 📁 Submission Directory Structure
-If you are evaluating the `.zip` submission, the folder structure is as follows:
 
-```text
-/
-├── full_camera_calibration_auto_detect.py  # Main source code
-├── README.md                               # Execution instructions
-├── Report.pdf                              # Mathematical theory and methodology
-└── data/                                   # Sample calibration images
-    └── leftcamera/
-        ├── Im_L_1.png
-        └── ...
-'''text
-
-🛠️ Prerequisites
+## Prerequisites
 Ensure you have Python 3.x installed along with the following standard computer vision libraries:
 
 Bash
 pip install opencv-python numpy matplotlib
-🚀 How to Execute the Code
+
+How to Execute the Code
 You can run this code either locally on your machine or in a cloud notebook environment (like Kaggle or Google Colab).
 
 Option A: Running Locally (Terminal / Command Prompt)
@@ -59,7 +47,7 @@ Python
 image_path_glob = '/kaggle/input/your-dataset-name/data/imgs/leftcamera/*.png'
 Run the cell. Matplotlib will automatically display the corner detection visualizations inline.
 
-📊 Expected Output
+## Expected Output
 Upon successful execution, the script will output the following directly to the console/terminal:
 
 The optimal inner-corner grid size automatically selected by the algorithm.
@@ -83,7 +71,3 @@ first_detection_[WxH].png: A visual confirmation image showing the drawn checker
 
 undistorted_example.png: An example of an image from the dataset with the calculated lens distortion mathematically removed.
 
-👥 Authors
-Aditya Upadhyay (22EC01056)
-
-Nikita Verma (22EC01039)
