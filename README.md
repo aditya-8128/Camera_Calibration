@@ -1,4 +1,4 @@
-Markdown
+
 # Camera Calibration using OpenCV (Zhang's Method)
 
 This repository contains a robust Python implementation of a camera calibration module using OpenCV. The software utilizes Zhang's Method to extract the 5 intrinsic parameters, 6 extrinsic parameters, and lens distortion coefficients from a set of stereocamera checkerboard images. 
