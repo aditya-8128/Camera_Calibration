@@ -12,40 +12,71 @@ This project was completed as a course assignment for the School of Electrical a
 * **Auto-Undistortion:** Automatically generates and saves an undistorted sample image based on the calculated camera matrix.
 
 
-## Prerequisites
-Ensure you have Python 3.x installed along with the following standard computer vision libraries:
+## 🛠️ Prerequisites
 
-Bash
+Ensure you have **Python 3.x** installed along with the following standard computer vision libraries:
+
+```bash
 pip install opencv-python numpy matplotlib
+```
 
-How to Execute the Code
-You can run this code either locally on your machine or in a cloud notebook environment (like Kaggle or Google Colab).
+---
 
-Option A: Running Locally (Terminal / Command Prompt)
-Extract the submission ZIP file to a local directory.
+## 🚀 How to Execute the Code
 
-Open the full_camera_calibration_auto_detect.py file in any text editor or IDE.
+You can run this code either:
 
-Locate the USER CONFIGURATION section at the very top of the script.
+* **Locally on your machine**
+* **In a cloud notebook environment** (Kaggle or Google Colab)
 
-Update the image_path_glob variable to point to the included sample images folder. For example:
+---
 
-Python
+## Option A: Running Locally (Terminal / Command Prompt)
+
+1. **Extract the submission ZIP file** to a local directory.
+
+2. **Open the script** in any editor or IDE:
+
+   ```
+   full_camera_calibration_auto_detect.py
+   ```
+
+3. **Locate the `USER CONFIGURATION` section** at the very top of the script.
+
+4. **Update the image path** to point to the sample images folder:
+
+```python
 image_path_glob = './data/leftcamera/*.png'
-Open your terminal, navigate to the extracted folder, and execute the script:
+```
 
-Bash
+5. **Run the script from the terminal:**
+
+```bash
 python full_camera_calibration_auto_detect.py
-Option B: Running in Kaggle / Google Colab
-Upload the full_camera_calibration_auto_detect.py script content into a new notebook cell.
+```
 
-Upload the sample images folder to the working directory or dataset input folder.
+---
 
-Update the image_path_glob variable to match the cloud path. For example, in Kaggle:
+## Option B: Running in Kaggle / Google Colab
 
-Python
+1. Upload the script:
+
+```
+full_camera_calibration_auto_detect.py
+```
+
+2. Upload the **sample images folder** to the working directory or dataset input folder.
+
+3. Update the image path variable. Example for **Kaggle**:
+
+```python
 image_path_glob = '/kaggle/input/your-dataset-name/data/imgs/leftcamera/*.png'
-Run the cell. Matplotlib will automatically display the corner detection visualizations inline.
+```
+
+4. **Run the notebook cell.**
+
+Matplotlib will automatically display the **corner detection visualizations inline**.
+
 
 ## Expected Output
 Upon successful execution, the script will output the following directly to the console/terminal:
