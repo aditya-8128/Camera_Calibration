@@ -4,13 +4,13 @@ This repository contains a robust Python implementation of a camera calibration 
 
 This project was completed as a course assignment for the School of Electrical and Computer Sciences at IIT Bhubaneswar.
 
-## ✨ Features
+## Features
 * **Dynamic Grid Auto-Detection:** Automatically scans and tests multiple candidate grid sizes (e.g., 6x5, 11x8) using various image processing techniques (histogram equalization, multi-scale resizing) to maximize successful detections across imperfect datasets.
 * **Sub-Pixel Corner Refinement:** Utilizes `cv2.cornerSubPix` to refine detected corners to fractional pixel accuracy, drastically lowering reprojection error.
 * **Comprehensive Metrics:** Calculates and outputs both the overall Root Mean Square (RMS) error and the average per-image Mean Reprojection Error.
 * **Auto-Undistortion:** Automatically generates and saves an undistorted sample image based on the calculated camera matrix.
 
-## 📁 Submission Directory Structure
+## Submission Directory Structure
 If you are evaluating the `.zip` submission, the folder structure is as follows:
 ```text
 /
@@ -21,3 +21,5 @@ If you are evaluating the `.zip` submission, the folder structure is as follows:
     └── leftcamera/
         ├── Im_L_1.png
         └── ...
+## Prerequisites
+Ensure you have Python 3.x installed along with the following standard computer vision libraries:
