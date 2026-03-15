@@ -16,7 +16,7 @@ If you are evaluating the `.zip` submission, the folder structure is as follows:
 
 ```text
 /
-├── full_camera_calibration_auto_detect.py  # Main source code
+├── Camera Calibration.py  # Main source code
 ├── README.md                               # Execution instructions
 ├── Report.pdf                              # Mathematical theory and methodology
 └── data/                                   # Sample calibration images
