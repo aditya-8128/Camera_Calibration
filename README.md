@@ -35,7 +35,7 @@ pip install opencv-python numpy matplotlib
 
 ---
 
-## 🚀 How to Execute the Code
+## How to Execute the Code
 
 You can run this code either:
 
@@ -91,7 +91,7 @@ image_path_glob = '/kaggle/input/your-dataset-name/data/imgs/leftcamera/*.png'
 Matplotlib will automatically display the **corner detection visualizations inline**.
 
 
-## 📊 Expected Output
+## Expected Output
 
 Upon successful execution, the script will output the following directly to the **console / terminal**:
 
